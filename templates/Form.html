@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <link rel="stylesheet" href="/static/hola.css">
+	<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-static/">
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+	
+	<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        #fcap{
+            font-size: 24px;
+            color:rgb(225, 186, 11);
+        }
+        .input{
+            width: 75%;
+            height: 10vh;
+        }
+
+        body{
+            background-image: url('https://adityamishra3648.github.io/T-com/Landing%20Page%20(1).png');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .form1{
+            background-color: rgba(255,255,0,0.9);
+            color: black;
+            border-radius: 5%;
+            padding: 2vw 2vw 2vw 2vw;
+            margin: 2vw 15vw 0vw 15vw;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="/">TCom</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	          <span class="navbar-toggler-icon"></span>
+	        </button>
+			
+	        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="/"><i class="fa-solid fa-house"></i> Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="trending.html"><i class="fa-solid fa-person-breastfeeding"></i> Trending</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Made in PSIT</a>
+	            </li>
+	          </ul>
+	        </div>
+		</nav>
+
+    <div class="form1">
+        <form method="post" action="/sell">
+             {% csrf_token %} 
+            <h1 align="center">All details are necessary</h1>
+            <br><br>
+
+            <div class="row mb-3">
+                <label for="seller_name" class="col-sm-2 col-form-label">Name of the Seller</label>
+                <div class="col-sm-10">
+                    <input type="text" name="seller_name" placeholder="seller Name" class="form-control form-control-lg">
+                </div>
+            </div>
+            <br>
+
+            <div class="row mb-3">
+                <label for="product_name" class="col-sm-2 col-form-label">Name of the Product</label>
+                <div class="col-sm-10">
+                    <input class="form-control form-control-lg" type="text" name="product_name" placeholder="Product Name">
+                </div>
+            </div>
+            <br>
+
+            <div class="row mb-3">
+                <label for="product_url" class="col-sm-2 col-form-label">Product Image</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control form-control-lg" name="product_url" placeholder="google-'Open image in new tab' copy link Paste">
+                </div>
+            </div>
+            <br>
+
+            <div class="row mb-3">
+                <label for="product_short" class="col-sm-2 col-form-label">Short description/<br>availablity of the Product</label>
+                <div class="col-sm-10">
+                    <textarea row="30" cols="70" size="100" class="form-control form-control-lg" name="product_short" placeholder="Short-description"></textarea>
+                </div>
+            </div>
+            <br>
+            
+            <div class="row mb-3">
+                <label for="product_des" class="col-sm-2 col-form-label">Description of the Product</label>
+                <div class="col-sm-10">
+                    <textarea row="30" cols="70" size="100" class="form-control form-control-lg" name="product_des" placeholder="Long description"></textarea>
+                </div>
+            </div>
+            <br>
+
+            <div class="row mb-3">
+                <label for="seller_mail" class="col-sm-2 col-form-label">Contact mail</label>
+                <div class="col-sm-10">
+                    <input type="text" placeholder="Enter contact-mail" class="form-control form-control-lg" name="seller_mail">
+                </div>
+            </div>
+            <br>
+
+            <div class="row mb-3">
+                <label for="product_condition" class="col-sm-2 col-form-label">Product condition</label>
+                <div class="col-sm-10">
+                    <input type="text" placeholder="Working/partially working" class="form-control form-control-lg" name="product_condition">
+                </div>
+            </div>
+            <br>
+
+            <div class="row mb-3">
+                <label for="seller_type" class="col-sm-2 col-form-label">Seller Hostler/dayscholor</label>
+                <div class="col-sm-10">
+                    <input type="text" placeholder="seller type" class="form-control form-control-lg" name="seller_type">
+                </div>
+            </div>
+            <br>
+
+            <div class="row mb-3">
+                <label for="borrow_amount" class="col-sm-2 col-form-label">Borrow Amount</label>
+                <div class="col-sm-10">
+                    <input type="text" placeholder="Enter a resonable borrow amount" class="form-control form-control-lg" name="borrow_amount">
+                </div>
+            </div>
+            <br>
+
+            <div class="row mb-3">
+                <label for="buy_amount" class="col-sm-2 col-form-label">Buy amount</label>
+                <div class="col-sm-10">
+                    <input type="text" placeholder="Enter a resonable Buying amount" class="form-control form-control-lg" name="buy_amount">
+                </div>
+            </div>
+            <br>
+
+            <div class="row mb-3">
+                <label for="seller_comment" class="col-sm-2 col-form-label">Enter a comment on your product</label>
+                <div class="col-sm-10">
+                    <input class="form-control form-control-lg" type="text" placeholder="It will be shown as first comment on your product" name="seller_comment">
+                </div>
+            </div>
+            <br>
+
+            <div class="row mb-3">
+                <label for="seller_department" class="col-sm-2 col-form-label">Enter your Department</label>
+                <div class="col-sm-10">
+                    <input class="form-control form-control-lg" type="text" placeholder="Department" name="seller_department">
+                </div>
+            </div>
+            <br>
+
+            <center><button type="submit" class="btn btn-success btn-lg btn btn-primary">Submit</button></center>
+        </form>
+    </div>
+
+    <div align="center" id="footer" style="background: #343A40;
+    margin-top: 5vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 1vw;
+    border: solid;
+    border-color: black;
+    color: white;">
+    <h3 style="font-size: 2vw;" class="cop">Copyright &copy; 2023 | Made with ❤ by Hostellers and Day Scholars</h3>
+  </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

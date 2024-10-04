@@ -1,0 +1,88 @@
+body{
+	background:url('Landing Page (1).png');
+	color:#fff;
+	font-family: arial;
+	line-height:1.5em;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#container2{
+	background:rgba(255,220,0,255);
+	margin-top: 30px;
+	margin-left: 10px;
+	overflow: hidden;
+	padding: 10px;
+	border: solid;
+	border-color: black;
+/*	display: flex;*/
+}	
+
+#image1{
+	height: 400px;
+	width: 400px;
+	background:url('boat-stone-260-portable-bluetooth-speaker.jpg');
+	background-size: cover;
+	border-radius: 50%;
+
+}
+
+#container3{
+	background:rgba(255,220,0,255);
+	width: 70%;
+	margin-top: 20px;
+	border: solid;
+	border-color: black;
+	overflow: hidden;
+	padding: 10px;
+}
+
+p{
+	color: black;
+
+}
+
+button{
+	align-items: center;
+	background-color: black;
+	border: none;
+	color: white;
+	padding: 10px 40px;
+	margin-left: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+#img{
+	height: 8vh;
+	width: 8vh;
+	min-height: 80px;
+	min-width: 80px;
+	background:url('boat-stone-260-portable-bluetooth-speaker.jpg');
+	background-size: cover;
+	border-radius: 50%;
+
+}
+
+#footer{
+	background: #343A40;
+	margin-top: 5vh;
+	width: 100%;
+/*	margin-left: 10px;*/
+	overflow: hidden;
+	padding: 10px;
+	border: solid;
+	border-color: black;
+	color: white;
+	
+/*	display: flex;*/
+}
+.mar{
+	min-height: 67vh;
+}
+.ab{
+	font-size: 2vh;
+}
